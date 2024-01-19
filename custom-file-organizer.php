@@ -15,12 +15,12 @@ Tested up to: 5.8
 Requires PHP: 7.0
 */
 
-if (!defined('ABSPATH')) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
-if (defined('WP_CLI') && WP_CLI) {
-    require_once __DIR__ . '/includes/class-custom-file-organizer-cli.php';
+if (defined('WP_CLI') && WP_CLI ) {
+    include_once __DIR__ . '/includes/class-custom-file-organizer-cli.php';
     WP_CLI::add_command('file-organizer', 'Custom_File_Organizer_CLI');
 }
 
@@ -43,7 +43,7 @@ function custom_file_organizer_admin_page()
     ?>
     <div class="wrap">
         <h1>
-            <?php _e('File Organizer', 'custom-file-organizer'); ?>
+    <?php _e('File Organizer', 'custom-file-organizer'); ?>
         </h1>
         <!-- TODO: Add content and logic for admin page here -->
     </div>

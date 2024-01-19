@@ -32,4 +32,4 @@ jobs:
 
       - name: Run PHP_CodeSniffer
         run: |
-          $GITHUB_WORKSPACE/vendor/bin/phpcs --standard=WordPress --extensions=php $GITHUB_WORKSPACE
+          $GITHUB_WORKSPACE/vendor/bin/phpcs --standard=WordPress --ignore=vendor/ --extensions=php $GITHUB_WORKSPACE
