@@ -111,7 +111,7 @@ class Custom_File_Organizer_CLI {
 			if ( $file_info->isFile() ) {
 				$filename   = $file_info->getFilename();
 				$first_char = strtolower( $filename[0] );
-				$new_dir    = $dir . $first_char . '/';
+				$new_dir    = $dir . '/' . $first_char . '/';
 
 				if ( ! file_exists( $new_dir ) && ! $dry_run ) {
 					mkdir( $new_dir );
@@ -120,11 +120,8 @@ class Custom_File_Organizer_CLI {
 				$old_path = $file_info->getRealPath();
 				$new_path = $new_dir . $filename;
 
-				if ( $dry_run ) {
-					WP_CLI::line( "Dry run: $old_path would be moved to $new_path" );
-				} else {
+				if ( !$dry_run ) {
 					rename( $old_path, $new_path );
-					WP_CLI::line( "Moved $old_path to $new_path" );
 				}
 
 				$movements[] = array(
