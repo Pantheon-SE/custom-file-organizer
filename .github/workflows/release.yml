@@ -11,14 +11,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.1.1
 
       - name: Build Release
         run: |
           zip -r custom-file-organizer-${GITHUB_REF#refs/tags/}.zip . -x "*.git*"
 
-      - name: Upload Release Artifact
-        uses: actions/upload-artifact@v2
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.2.0
         with:
           name: custom-file-organizer
           path: custom-file-organizer-${GITHUB_REF#refs/tags/}.zip
