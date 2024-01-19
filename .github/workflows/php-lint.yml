@@ -32,5 +32,5 @@ jobs:
 
       - name: Run PHP_CodeSniffer
         run: |
-          phpcs --config-set installed_paths $GITHUB_WORKSPACE/vendor/wp-coding-standards/wpcs
+          phpcs --config-set installed_paths $GITHUB_WORKSPACE/vendor/wp-coding-standards/wpcs,$GITHUB_WORKSPACE/vendor/phpcsstandards,phpcsutils
           phpcs --standard=WordPress --extensions=php $GITHUB_WORKSPACE
