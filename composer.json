@@ -20,5 +20,13 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "scripts": {
+        "phpcbf": [
+            "phpcbf --standard=WordPress --ignore=vendor/ ."
+        ],
+        "phpcs": [
+            "phpcs --standard=WordPress --ignore=vendor/ ."
+        ]
     }
 }
