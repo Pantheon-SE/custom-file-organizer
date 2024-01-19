@@ -1,0 +1,23 @@
+{
+    "name": "pantheon-se/custom-file-organizer",
+    "description": "A WordPress plugin that provides WP-CLI commands to organize files in the uploads directory.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Kyle Taylor",
+            "email": "kyle.taylor@pantheon.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0",
+        "squizlabs/php_codesniffer": "^3.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

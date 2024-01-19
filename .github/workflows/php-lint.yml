@@ -27,6 +27,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          cd $GITHUB_WORKSPACE
           composer install
 
       - name: Run PHP_CodeSniffer

@@ -1,0 +1,39 @@
+# Composer dependencies
+/vendor/
+
+# Various system files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Editor directories and files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Node modules (if using Node.js in your project)
+/node_modules/
+
+# Logs and caches
+*.log
+.cache
+
+# Exported database(s)
+*.sql
+*.sql.gz
+*.csv
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+
+# PHPStan
+/phpstan.neon
+/phpstan.neon.dist
+
+# User-specific files
+*.swp
+*.swo
+*.swn
