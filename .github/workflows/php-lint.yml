@@ -31,4 +31,6 @@ jobs:
           composer install
 
       - name: Run PHP_CodeSniffer
-        run: phpcs --standard=WordPress --extensions=php $GITHUB_WORKSPACE
+        run: |
+          phpcs --config-set installed_paths $GITHUB_WORKSPACE/vendor/wp-coding-standards/wpcs
+          phpcs --standard=WordPress --extensions=php $GITHUB_WORKSPACE
