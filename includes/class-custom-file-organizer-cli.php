@@ -85,12 +85,11 @@ class Custom_File_Organizer_CLI {
 		$upload_dir = wp_upload_dir();
 		$base_dir   = trailingslashit( $upload_dir['basedir'] );
 		$dry_run    = get_flag_value( $assoc_args, 'dry-run', false );
-		$format     = get_flag_value( $assoc_args, 'format', 'table' );
 
 		$file_movements = $this->organize_directory( $base_dir, $dry_run );
 
 		if ( $dry_run ) {
-			WP_CLI::line( 'Dry run completed. No files were moved.' );
+			WP_CLI::log( 'Dry run completed. No files were moved.' );
 		}
 
 		$formatter = new \WP_CLI\Formatter( $assoc_args, array( 'before', 'after' ), 'file_movements' );
